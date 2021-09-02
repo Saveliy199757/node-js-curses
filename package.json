@@ -1,0 +1,26 @@
+{
+  "name": "node-js-express-app",
+  "version": "1.0.0",
+  "description": "nodejs express js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index,js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saveliy199757/node-js-curses.git"
+  },
+  "author": "saveliy199757@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saveliy199757/node-js-curses/issues"
+  },
+  "homepage": "https://github.com/Saveliy199757/node-js-curses#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
