@@ -1,6 +1,10 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const addRoutes = require('./routes/add');
+const coursesRoutes = require('./routes/courses');
+const mainRoutes = require('./routes/home')
+
 const app = express();
 
 const hbs = exphbs.create({
@@ -14,23 +18,12 @@ app.set('views', 'views'); // обозначаем где находятся н�
 
 app.use(express.static('public')); // говорим приложению где находиться пользовпт. скриты и стили
 
+app.use('/', mainRoutes);
+app.use('/add', addRoutes);
+app.use('/courses', coursesRoutes);
+
 const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-   res.render('index');
-})
-app.get('/add', (req, res) => {
-    res.render('add', {
-        title: "Добавить курс",
-        isAdd: true
-    });
-})
-app.get('/courses', (req, res) => {
-    res.render('courses', {
-        title: "Курсы js",
-        isCourses: true
-    });
-})
 
 app.listen(PORT, () => {
     console.log("port is run", PORT);
