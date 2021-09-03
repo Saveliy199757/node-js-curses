@@ -18,6 +18,8 @@ app.set('views', 'views'); // обозначаем где находятся н�
 
 app.use(express.static('public')); // говорим приложению где находиться пользовпт. скриты и стили
 
+app.use(express.urlencoded({ extended: true }))
+
 app.use('/', mainRoutes);
 app.use('/add', addRoutes);
 app.use('/courses', coursesRoutes);
