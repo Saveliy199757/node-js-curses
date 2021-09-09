@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const mongoose =require('mongoose');
 const exphbs = require('express-handlebars');
 const addRoutes = require('./routes/add');
 const cardRoutes = require('./routes/card');
@@ -27,7 +28,6 @@ app.use('/courses', coursesRoutes);
 app.use('/card', cardRoutes);
 
 const PORT = process.env.PORT || 3000;
-
 
 app.listen(PORT, () => {
     console.log("port is run", PORT);
