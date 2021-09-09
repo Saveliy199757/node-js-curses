@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const mongoose = require('mongoose');
 const addRoutes = require('./routes/add');
 const cardRoutes = require('./routes/card');
 const coursesRoutes = require('./routes/courses');
@@ -29,6 +30,17 @@ app.use('/card', cardRoutes);
 const PORT = process.env.PORT || 3000;
 
 
-app.listen(PORT, () => {
-    console.log("port is run", PORT);
-})
+async function start () {
+    try {
+        const url = "mongodb+srv://leomanking:veczvecz@cluster0.imaut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+        await mongoose.connect(url, { useNewUrlParser: true });
+
+        app.listen(PORT, () => {
+            console.log("port is run", PORT);
+        })
+    } catch (e) {
+        console.log("error:",e);
+    }
+}
+
+start()
