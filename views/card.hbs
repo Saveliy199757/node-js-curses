@@ -17,7 +17,7 @@
                 <td>{{title}}</td>
                 <td>{{count}}</td>
                 <td>
-                    <button class="btn btn-small js-remove" data-id="{{id}}">Удалить</button>
+                    <button class="btn btn-small js-remove" data-id="{{_id}}">Удалить</button>
                 </td>
             </tr>
         {{/each}}
@@ -25,6 +25,9 @@
     </table>
 
     <p class="price"><strong>Цена:</strong> <span>{{price}}</span></p>
+    <form action="/orders" method="post">
+        <button type="submit" class="btn">Сделать заказ</button>
+    </form>
 {{else}}
    <p>товаров нет в корзине</p>
 {{/if}}

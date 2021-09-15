@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "node_modules/.bin/nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/Saveliy199757/node-js-curses#readme",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
+    "handlebars": "^4.7.7",
     "mongoose": "^6.0.5",
     "uuid": "^8.3.2"
   },

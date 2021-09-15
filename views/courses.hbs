@@ -13,10 +13,10 @@
                     <p class="price">Цена: <span>{{price}}</span></p>
                 </div>
                 <div class="card-action">
-                    <a href="/courses/{{id}}" target="_blank">Открыть курс</a>
-                    <a href="/courses/{{id}}/edit?allow=true">Редактировать</a>
+                    <a href="/courses/id-{{_id}}" target="_blank">Открыть курс</a>
+                    <a href="/courses/id-{{_id}}/edit?allow=true">Редактировать</a>
                     <form action="card/add" method="post">
-                        <input type="hidden" name="id" value="{{id}}">
+                        <input type="hidden" name="id" value="{{_id}}">
                         <button type="submit" class="btn btn-primary">Купить</button>
                     </form>
                 </div>
