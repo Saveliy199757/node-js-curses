@@ -68,4 +68,4 @@ userSchema.methods.clearCart = function () {
 }
 
 
-module.exports = model("User", userSchema );
+module.exports = model("User", userSchema);

@@ -12,9 +12,7 @@ router.get('/', async (req, res) => {
                     return total += c.count + c.course.price
                 }, 0)
             }
-        })
-
-        console.log('order:', order)
+        });
 
         res.render('orders', {
             isOrder: true,
